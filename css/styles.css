@@ -371,15 +371,15 @@ aside.sideMenu li i {
 }
 
 .contact li:first-child {
-  list-style-image: url("/images/ico/github.svg");
+  list-style-image: url("../images/ico/github.svg");
 }
 
 .contact li:nth-child(2) {
-  list-style-image: url("/images/ico/discord.svg");
+  list-style-image: url("../images/ico/discord.svg");
 }
 
 .contact li:last-child {
-  list-style-image: url("/images/ico/email.svg");
+  list-style-image: url("../images/ico/email.svg");
 }
 
 .contact li {
