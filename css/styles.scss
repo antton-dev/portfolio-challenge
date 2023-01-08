@@ -1,0 +1,413 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+/* COLORS */
+$green: #47EB2F;
+$blue1: #1300EB;
+$blue2: #14089E;
+$orange: #EB6817;
+$gradient:radial-gradient(68.16% 95.6% at 9.31% 10.89%, $blue1 0%, $blue2 100%); 
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background: $gradient;
+    color: #fff;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.modal {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.topNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+    
+    .mobile {
+        display: none;
+    }
+
+    .modal {
+        display: none;
+    }
+
+    nav.desktop {
+        ul {
+            gap: 20px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-evenly;
+            
+
+            a {
+                background-color: $orange;
+                border-radius: 50px;
+                padding: 0 10px;
+                height: 50px;
+                width: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                
+            }
+        }
+    }
+    
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    width: 80vw;
+    margin: 40px auto 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.scroll {
+    font-size: 50px;
+    color: $green;
+    align-self: center;
+    animation: upDown ease-in-out 1s infinite;
+}
+
+@keyframes upDown {
+    0% {
+        padding-top: 0px;
+    }
+    
+    50% {
+        padding-top: 15px;
+    }
+
+    60% {
+        padding-top: 14px;
+    }
+
+    100% {
+        padding-top: 0px;
+    }
+}
+
+
+.portrait {
+    height: 35vw;
+    width: auto;
+    margin-top: 45px;
+    box-shadow: 30px -24px 0px $green;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    
+    .mainContainer {
+        width: 75vw;
+    }
+}
+
+section {
+    padding-top: 10px;
+}
+
+
+aside.sideMenu {
+    background-color: $blue1;
+    height: min-content;
+    position: sticky;
+    top: 50px;
+    max-width: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-right: 76px;
+    margin-left: 40px;
+    border-radius: 10px;
+
+    ul {
+        padding: 0px;
+    }
+    li {
+        list-style-type: none;
+        margin: 0px auto;
+        text-align: center;
+        padding: 17.5px 0;
+        transition: background .2s ease-in;
+
+        i {
+            font-size: 2em;
+        }
+    }
+}
+
+#active {
+    width: 100%;
+    border-radius: 5px;
+    background: $blue2;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 70px;
+}
+// skills
+
+.skill {
+    background-color: $blue1;
+    box-shadow: 0px 0px 50px $blue2;
+    width: 230px;
+    min-height: 300px;
+    text-align: center;
+
+    &:before {
+        position: relative;
+        content: '';
+        background: var(--background-image); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 100px;
+        margin: 0 auto;
+        margin-top: -45px;
+        display: block;
+        width: 90px;
+        height: 90px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 70%;
+
+        h3 {
+            font-size: 1.5em;
+        }
+        .level {
+            color: $green;
+            font-size: 3em;
+        }
+    }
+}
+
+
+// projects
+
+
+.projects {
+    margin-top: 100px;
+    .container {
+        margin-top: 0px;
+    }
+}
+.project {
+    background: $blue1;
+    width: 300px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    h3 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: justify;
+        font-size: 1em;
+        padding: 0 20px;
+    }
+
+    .links {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin: 0px 20px 15px;
+
+        a {
+            width: 90%;
+            background-color: $orange;
+            border-radius: 50px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.contact {
+    height: 90vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: #000;
+
+    li:first-child {
+        list-style-image: url('/images/ico/github.svg');
+    }
+
+    li:nth-child(2) {
+        list-style-image: url('/images/ico/discord.svg');
+    }
+    li:last-child {
+        list-style-image: url('/images/ico/email.svg');
+        
+    }
+
+    li {
+        font-size: 1.2em;
+    }
+    li::marker {
+        font-size: 2em;
+    }
+}
+
+
+footer {
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .hero {
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .portrait {
+            margin: auto;
+            height: 250px;
+            width: auto;
+        }
+    }
+
+    
+    .scroll {
+        display: none;
+    }
+    
+    nav.desktop {
+        display: none;
+    }
+    
+    .topNav .mobile {
+        display: block;
+        font-size: 2em;
+        color: $orange;
+        position: fixed;
+        left: 20px;
+    }
+
+    .topNav {
+        margin: auto;
+    }
+
+    .modal {
+        background: $orange;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+
+        i {
+            align-self: center;
+            font-size: 2em;
+            color: $blue2;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+        }
+
+        ul {
+            text-align: center;
+            list-style-type: none;
+            font-size: 2em;
+            padding: 0;
+
+            li {
+                margin: 40px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+    
+}
+
+
+@media screen and (max-width:800px) {
+    header {
+        height: auto;
+    }
+
+
+    .sideMenu {
+        display: none;
+    }
+
+    div.mainContainer {
+        width: 100vw;
+        
+        section .container {
+            justify-content: center;
+        }
+    }
+
+
+}
